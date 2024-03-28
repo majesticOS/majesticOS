@@ -1,4 +1,6 @@
-Welcome to majesticOS A new Operating system i am currently work on written in C And Assembly! 
+# What is MajesticOS
+MajesticOS will focus on a retro feel with modern features majesticOS is written in C And Assembly! 
+i hope to make a easy installation Guide for majesticOS
 
 contributers are welcome!
 
