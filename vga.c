@@ -2,19 +2,18 @@
 
 uint16_t column = 0;
 uint16_t line = 0;
-uint16_t* const vga = (uint16_t* const) 0xB8000
-const uint16_t defaultColor = (COLOR8_BLACK << 8) |
-(COLOR8_LIGHT_GREY << 12);
+uint16_t* const vga = (uint16_t* const) 0xB8000;
+const uint16_t defaultColor = (COLOR8_BLACK << 8) | (COLOR_LIGHT_GREY << 12);
 uint16_t currentColor = defaultColor;
 
-void Reset(){
+void reset(){
    line = 0;
    column = 0;
    currentColor = defaultColor;
-   
+
    for (uint16_t y = 0; y < height; y++){
       for (uint16_t x = 0; x < width; x++){
-      vga[y * width + x} = ' ' | defaultColor;
+      vga[y * width + x] = ' ' | defaultColor;
       }
    }
 }
@@ -27,23 +26,23 @@ void newLine(){
       scrollUp();
       column = 0;
       }
-      
+
 }
 
 void scrollUp (){
    for (uint16_t y = 0; y < height; y++){
-      for uint16_t x = 0; x < width; x++){
-      vga(y-1) * width + x] = vga[y*width+x];
-   
+      for (uint16_t x = 0; x < width; x++){
+      vga[(y-1) * width + x] = vga[y*width+x];
+
       }
  }
- 
- for (uint16_t x = 0; x < width x++){
+
+ for (uint16_t x = 0; x < width; x++){
     vga[(height-1) * width + x] = ' ' |
     currentColor;
-   } 
+   }
  }
- 
+
  void print(const char* s){
     while(*s){
       switch(*s){
@@ -53,7 +52,7 @@ void scrollUp (){
         case '\r':
         column = 0;
         break;
-        case '\t'
+        case '\t':
           if (column == width){
               newLine();
            }
@@ -73,6 +72,6 @@ void scrollUp (){
              break;
              }
              s++;
-             
+
     }
  }
