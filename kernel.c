@@ -1,9 +1,9 @@
-#incliude "vga.h"
+#include "vga.h"
 
 void kmain(void);
 
 void kmain (void){
     reset();
-    print("Hello World!\r\n")
+    print("Hello World!\r\n");
 
 }

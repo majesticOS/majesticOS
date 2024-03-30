@@ -4,7 +4,7 @@ BITS 32
      ALIGN 4
      DD 0x1BADB002
      DD 0x00000000
-     DD -(0x1BAD002 + 0x0000000)
+     DD -(0x1BADB002 + 0x00000000)
 
 global start 
 extern kmain 
