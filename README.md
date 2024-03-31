@@ -4,6 +4,6 @@ there will soon be a easy Installation Guide for majesticOS
 
 contributers are welcome!
 
-if you have any problem with the OS make sure to leave a [Issue](https://github.com/majesticOS/majesticOS/issues).
+if you have any problem with the OS make sure to leave an [Issue](https://github.com/majesticOS/majesticOS/issues).
 
 ![majesticOS](https://raw.githubusercontent.com/majesticOS/majesticOS/main/logo.png)
