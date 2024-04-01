@@ -1,22 +1,21 @@
 global gdt_flush
 
 gdt_flush:
+    MOV eax, [esp+4]
+    LGDT [eax]
 
-   MOV eax, [esp+4]
-   LGDT [eax]
-
-  MOV eax, 0x10
- MOV ds, ax
- MOV es, ax
- MOV fs, ax
- MOV gs, ax
- MOV ss, ax
-JMP 0x08:.flush
+    MOV eax, 0x10
+    MOV ds, ax
+    MOV es, ax
+    MOV fs, ax
+    MOV gs, ax
+    MOV ss, ax
+    JMP 0x08:.flush
 .flush:
-RET
+    RET
 
-global tss_flush 
+global tss_flush
 tss_flush:
-  MOVE ax, 0x2B
-  LTR ax
-  RET
+    MOV ax, 0x2B
+    LTR ax
+    RET
